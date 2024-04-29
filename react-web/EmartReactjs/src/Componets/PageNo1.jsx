@@ -16,12 +16,6 @@ import image21 from "../assets/asset 21.webp"
 import image2 from "../assets/asset 2.webp"
 import image3 from "../assets/asset 3.webp"
 
-
-
-
-
-
-
 const PageNo1 = () => {
   return (
     <div className='pt-24'>
