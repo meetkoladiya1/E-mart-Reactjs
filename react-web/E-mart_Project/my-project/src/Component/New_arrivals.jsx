@@ -25,7 +25,7 @@ const New_arrivals = () => {
 
                             <div className='relative primary-img'>
                                 <div className='overflow-hidden relative'>
-                                    <img decoding="async" loading="lazy" alt="custom-image" src="	https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Snake-Plant.webp" />
+                                    <img decoding="async" loading="lazy" alt="custom-image" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/Birds-Nest-Leslie-Fern.webp" />
                                 </div>
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>

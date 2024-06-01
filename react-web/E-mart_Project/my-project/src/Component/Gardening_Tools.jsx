@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
+import { NavLink } from 'react-router-dom'
 
 const Gardening_Tools = () => {
     return (
@@ -20,7 +21,7 @@ const Gardening_Tools = () => {
                                 </h1>
                                 <div className='mt-5 mb-3 max-md:flex justify-center'>
                                     <a href="" className='inline-block py-[12px] px-[40px] font-semibold hover:-translate-y-[15px] duration-300 ease-in-out bg-white shop-now'>
-                                        Shop Now
+                                        <NavLink to={'./Shop_Now'}>Shop Now</NavLink>
                                     </a>
                                 </div>
                             </div>

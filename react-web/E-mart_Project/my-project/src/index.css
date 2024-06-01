@@ -244,8 +244,8 @@
 .icon-1:hover {
   background-color: black!important;
 }
-.icon-1:hover a{
-  filter: invert(100%) sepia(1);  
+.icon-1:hover img{
+  filter: invert(100%) sepia(1) sepia(0) hue-rotate(170deg) ;  
 }
 /* ---------------Gardening Tools-------------- */
 .shop-now:hover{

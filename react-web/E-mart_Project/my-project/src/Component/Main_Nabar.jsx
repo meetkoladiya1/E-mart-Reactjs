@@ -9,8 +9,12 @@ import { useSelector } from 'react-redux';
 
 
 function Main_Navbar() {
-  const result = useSelector((state) => state.Reducer);
+  const result = useSelector((state) => state.reducer);
+  const WishList = useSelector((state) => state.Wish_reducer);
+
   console.warn("HeaderData called", result);
+  console.warn("WishlistData called", WishList);
+
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -23,6 +27,7 @@ function Main_Navbar() {
   const mouseout = (e) => {
     setdemo(false)
   }
+
   const [Product, setproduct] = useState(false)
   const Productmouseenter = (e) => {
     setproduct(true)
@@ -30,6 +35,7 @@ function Main_Navbar() {
   const Productmouseout = (e) => {
     setproduct(false)
   }
+
   const [Shop, setShop] = useState(false)
   const Shopmouseenter = (e) => {
     setShop(true)
@@ -37,6 +43,7 @@ function Main_Navbar() {
   const Shoptmouseout = (e) => {
     setShop(false)
   }
+  
   const [Blog, setBlog] = useState(false)
   const Blogmouseenter = (e) => {
     setBlog(true)
@@ -69,10 +76,10 @@ function Main_Navbar() {
 
               {/* Demo */}
               <NavDropdown title={
-                <div className='flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] translate-x-[540px]'>
-                  Demo<span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down arrow"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                <div className='flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] max-xl:px-0 translate-x-[540px]'>
+                  Demo<span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down arrow"><polyline points="6 9 12 15 18 9" className='arrow'></polyline></svg></span>
                 </div> 
-              } show={demo} onMouseEnter={mouseenter} onMouseLeave={mouseout} className="-translate-x-[540px] max-sm:translate-x-0">
+              } show={demo} onMouseEnter={mouseenter} onMouseLeave={mouseout} className="-translate-x-[540px] max-sm:translate-x-0">  
                 <div className='h-[1px] bg-[#c7c8cb] max-xl:hidden'></div>
                 <section className='flex justify-evenly max-xl:justify-between items-center w-screen h-[500px] max-xl:ml-0 max-xl:w-block max-xl:h-auto m-auto max-xl:border-b-[1px] mt-[12px]'>
                   <div className='flex max-xl:block py-[50px] max-xl:py-0 pl-[50px] justify-center'>
@@ -127,7 +134,7 @@ function Main_Navbar() {
                   <div className='flex  items-center justify-end py-[15px] pe-[250px]'>
                     <p className='text-danger flex'>Summer Sale 65% Off
                       <span>
-                        <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                        <a href="../Shop_Now" className='text-muted ml-2 add'>Shop Now</a>
                       </span>
                     </p>
                   </div>
@@ -139,9 +146,9 @@ function Main_Navbar() {
 
               <NavDropdown title={
                 <div className='flex justify-between items-center drop font-semibold icon max-xl:border-b-[1px] max-xl:px-0 translate-x-[622px]'>
-                  Product<span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down arrow "><polyline points="6 9 12 15 18 9" className='arrow '></polyline></svg></span>
+                Product<span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down arrow "><polyline points="6 9 12 15 18 9" className='arrow '></polyline></svg></span>
                 </div>
-              } show={Product} onMouseEnter={Productmouseenter} onMouseLeave={Productmouseout} className='-translate-x-[622px]'>
+              } show={Product} onMouseEnter={Productmouseenter} onMouseLeave={Productmouseout} className="-translate-x-[622px] max-sm:translate-x-0">
                 <div className='h-[1px] bg-[#c7c8cb] max-xl:hidden'></div>
                 <section className='w-screen flex max-xl:block items-center  max-xl:m-0 max-xl:w-auto max-xl:leading-6 m-auto max-xl:border-b-[1px] justify-evenly'>
                   <div className='flex max-xl:block'>
@@ -333,9 +340,9 @@ function Main_Navbar() {
             </div>
 
             <div className='max-xl:hidden ml-2 flex  max-xl:pr-0 pr-2 '>
-              <a href="" className='flex '>
+              <a href={'./wishlist'} className='flex '>
                 <span className="wishlist_products_counter_text"><img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" alt="Wishlist-logo" /> </span>
-                <span className='-mt-4 font-semibold'>0</span>
+                <span className='-mt-4 font-semibold'>{WishList.length}</span>
               </a>
             </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
+import { NavLink } from 'react-router-dom'
 
 
 const Header_Part = () => {
@@ -14,7 +15,7 @@ const Header_Part = () => {
                 <p className='text-muted px-3 '>Rectangle follower distribute device layer. Library hand ellipse device strikethrough.</p>
                 <div className='my-5'>
                   <a href=" ">
-                    <button className='py-[12px] px-[40px] border-1 border-black font-semibold hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
+                    <button className='py-[12px] px-[40px] border-1 border-black font-semibold hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'><NavLink to={'./Shop_Now'}>Shop Now</NavLink></button>
                   </a>
                 </div>
               </div>

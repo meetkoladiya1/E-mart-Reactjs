@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form';
-import {useDispatch , useSelector} from 'react-redux'
-import {addToCart, removeToCart , EmptyCart} from '../Product_Data/Redux/Action'
-import {productData} from '../Product_Data/ProductRedux/ProductAction'
+import { useDispatch , useSelector } from 'react-redux'
+import { addToCart , addToWishlist } from '../Product_Data/Redux/Action'
+import { productData } from '../Product_Data/ProductRedux/ProductAction'
 import heart from '../assets/heart.svg'
 import Eyes from '../assets/Eyes.svg'
 import Cart from '../assets/Cart.svg'
@@ -68,21 +68,21 @@ const Shop_Now = () => {
                                 </div>
                                 <div className='absolute left-0 top-0 z-1 shop-icon'>
                                     <div className='p-4'>
+                                            <button onClick={() => dispatch(addToWishlist(item))}>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
-                                            <a href="" className=''>
                                                 <img src={heart} alt="" height={16} width={16} />
-                                            </a>
                                         </div>
+                                            </button>
                                         <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                             <a href="">
                                                 <img src={Eyes} alt="" height={16} width={16} />
                                             </a>
                                         </div>
-                                        <div className='p-[12px] flex justify-center bg-white m-2  rounded-full icon-1 ' onClick={()=> dispatch(addToCart(item))}>
-                                            <a href="">
+                                            <button onClick={()=> dispatch(addToCart(item))}>
+                                        <div className='p-[12px] flex justify-center bg-white m-2 rounded-full icon-1' >
                                                 <img src={Cart} alt="" height={8} width={12} />
-                                            </a>
                                         </div>
+                                            </button>
                                     </div>
                                 </div>
                             </div>
