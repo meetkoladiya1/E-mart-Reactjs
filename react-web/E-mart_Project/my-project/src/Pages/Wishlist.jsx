@@ -8,6 +8,9 @@ const Wishlist = () => {
     const dispatch = useDispatch();
     const wishlistData = useSelector((state) => state.Wish_reducer);
 
+    let date = new Date()
+
+
     const Add_Cart = (item) => {
       dispatch(addToCart(item));
       dispatch(RemoveToWishlist(item.id));
@@ -37,7 +40,7 @@ const Wishlist = () => {
                     <div className="col-6 font-normal">Products</div>
                     <div className="col-2 font-normal">Price</div>
                     <div className="col-2 font-normal">Date Added</div>
-                    <div className="col-2 font-normal">Stock Status</div>
+                    <div className="col-2 font-normal"></div>
                   </div>
                 </div>
                 <hr />
@@ -57,11 +60,12 @@ const Wishlist = () => {
                           <div className="col-6 ">{item.name}</div>
                         </div>
                         <div className="col-2">{item.d_price}</div>
-                        <div className="col-2">1</div>
-                        <div className="col-2">$123</div>
-                        <div className=''>
-                          <button className='py-[12px] px-[0px] border-1 border-black font-semibold hover:bg-black hover:text-white hover:-translate-y-[5px] duration-400 ease-in-out' onClick={() => Add_Cart(item)}>Add To Cart</button>
-                        </div>
+                        <div className="col-2 items-center flex justify-center text-wrap max-md:w-auto max-md:justify-start">
+                      {date.toDateString()}
+                    </div>
+                          <button className="w-36 col-3 hover:-translate-y-[10px] duration-300 ease-in-out max-md:w-[100%] flex justify-center text-white py-[5px] px-[30px] bg-black text-[17px]  max-lg:py-[5px] checkout hover:border-2 hover:border-black" onClick={() => Add_Cart(item)}>
+                            Add To Cart
+                          </button>
                       </div>
                       <hr />  
                     </div>

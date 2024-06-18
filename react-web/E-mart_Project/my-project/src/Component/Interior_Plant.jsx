@@ -56,7 +56,7 @@ const Interior_Plant = () => {
                             </a>
                         </div>
                             <button onClick={()=> dispatch(addToCart(item))}>
-                        <div className='p-[12px] flex justify-center bg-white m-2 rounded-full icon-1' >
+                        <div className='p-[12px] bg-white rounded-full m-2 flex justify-center icon-1'>
                                 <img src={Cart} alt="" height={8} width={12} />
                         </div>
                             </button>

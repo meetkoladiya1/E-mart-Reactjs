@@ -1,11 +1,4 @@
 import React from 'react'
-// import Visa from '../assets/Visa.svg'
-// import WebMoney from '../assets/WebMoney.svg'
-// import Maestro from '../assets/Maestro.svg'
-// import JCB from '../assets/JCB.svg'
-// import Discover from '../assets/Discover.svg'
-// import Experss from '../assets/Experss.svg'
-// import icon from '../assets/icon.svg'
 
 import Visa from '../assets/Visa.svg'
 import WebMoney from '../assets/WebMoney.svg'
@@ -79,7 +72,7 @@ const Footer = () => {
             </div>
             <div className='col flex justify-center max-sm:py-1'>
               <div className='flex'>
-              <span className="text-base text-gray-500">Designed by:<span className="font-bold">Romil</span></span>
+              <span className="text-base text-gray-500">Designed by:<span className="font-bold">Wpignite</span></span>
               </div>
             </div>
             <div className="col flex justify-end max-sm:justify-center max-sm:py-1 ">

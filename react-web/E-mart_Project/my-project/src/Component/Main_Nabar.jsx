@@ -64,7 +64,9 @@ function Main_Navbar() {
     <Navbar collapseOnSelect expand="xl" className="flex items-center container z-10">
       <Container fluid className='flex justify-between'>
         <Navbar.Brand href="#home" className='max-xl:order-2'>
-          <img alt="logo" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width={140} height={31} />
+          <NavLink to={'/'}>
+            <img alt="logo" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width={140} height={31} />
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={handleShow} className='d-xl-none max-xl:order-1' />
         <Offcanvas show={show} onHide={handleClose} responsive="xl" >
@@ -242,9 +244,8 @@ function Main_Navbar() {
 
                       <div className='mt-[20px]'>
                         <NavDropdown.Item href="#action38" className='font-bold py-[8px] text-[19px] '> Shop Pages </NavDropdown.Item>
-                        <NavDropdown.Item href="#action39" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'>
-                          <NavLink to="wishlist"> Wishlist</NavLink></NavDropdown.Item>
-                        <NavDropdown.Item href="#action40" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> <NavLink to="cart"> Cart </NavLink></NavDropdown.Item>
+                        <NavDropdown.Item href="#action39" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'><NavLink to="wishlist">Wishlist</NavLink></NavDropdown.Item>
+                        <NavDropdown.Item href="#action40" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> <NavLink to="cart">Cart</NavLink></NavDropdown.Item>
                         <NavDropdown.Item href="#action41" className='text-muted py-[8px] text-[18px] hover:translate-x-[13px] duration-300 ease-in-out'> <NavLink to='checkout'>Checkout</NavLink> </NavDropdown.Item>
                       </div>
                     </div>
